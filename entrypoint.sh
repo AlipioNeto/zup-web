@@ -23,6 +23,7 @@ else
 
         sed -i "s@SENTRY_DSN@$SENTRY_DSN@g" /var/www/zup-painel/index.html
         sed -i "s@GOOGLE_ANALYTICS_KEY@$GOOGLE_ANALYTICS_KEY@g" /var/www/zup-painel/index.html
+        sed -i "s@GOOGLE_API_KEY@$GOOGLE_API_KEY@g" /var/www/zup-painel/index.html
         sed -i "s@PAGE_TITLE@$PANEL_PAGE_TITLE@g" /var/www/zup-painel/index.html
 
 	[ -d /painel/images ] && cp -R /painel/images/*.* /var/www/zup-painel/assets/images
@@ -39,6 +40,7 @@ else
         sed -i -E "s@(mapZoom:')([^']*)?(')@\1$MAP_ZOOM\3@g" /var/www/zup-web-cidadao/scripts/constants.js
 
         sed -i "s@GOOGLE_ANALYTICS_KEY@$GOOGLE_ANALYTICS_KEY@g" /var/www/zup-web-cidadao/index.html
+        sed -i "s@GOOGLE_API_KEY@$GOOGLE_API_KEY@g" /var/www/zup-web-cidadao/index.html
 
         [ -d /web/images ] && cp -R /web/images/*.* /var/www/zup-web-cidadao/images
 
