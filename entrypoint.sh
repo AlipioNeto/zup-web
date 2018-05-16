@@ -115,6 +115,9 @@ else
         fi
 fi
 
+IP_ADDRESS_API=$(echo "$API_URL" | awk -F/ '{print $3}')
+sed -i "s@IP_ADDRESS_API@$IP_ADDRESS_API@g" /etc/nginx/nginx.conf
+
 echo "ZUP-WEB is running."
 
 exec "$@"
